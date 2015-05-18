@@ -39,4 +39,20 @@ describe Romanizer do
   it 'converts 9 into IX' do
     expect(Romanizer.convert(9)).to eq('IX')
   end
+
+  it 'converts 20 into XX' do
+    expect(Romanizer.convert(20)).to eq('XX')
+  end
+
+  it 'converts 30 into XXX' do
+    expect(Romanizer.convert(30)).to eq('XXX')
+  end
+
+  it 'converts 40 into XL' do
+    expect(Romanizer.convert(40)).to eq('XL')
+  end
+
+  it 'converts 50 into L' do
+    expect(Romanizer.convert(50)).to eq('L')
+  end
 end
