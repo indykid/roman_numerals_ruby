@@ -35,4 +35,8 @@ describe Romanizer do
   it 'converts 4 into IV' do
     expect(Romanizer.convert(4)).to eq('IV')
   end
+
+  it 'converts 9 into IX' do
+    expect(Romanizer.convert(9)).to eq('IX')
+  end
 end
