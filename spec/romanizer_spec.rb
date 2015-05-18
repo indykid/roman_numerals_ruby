@@ -20,22 +20,6 @@ describe Romanizer do
     expect(Romanizer.convert(10)).to eq('X')
   end
 
-  it 'converts 50 into L' do
-    expect(Romanizer.convert(50)).to eq('L')
-  end
-
-  it 'converts 100 into C' do
-    expect(Romanizer.convert(100)).to eq('C')
-  end
-
-  it 'converts 500 into D' do
-    expect(Romanizer.convert(500)).to eq('D')
-  end
-
-  it 'converts 1000 into M' do
-    expect(Romanizer.convert(1000)).to eq('M')
-  end
-
   it 'converts 6 into VI' do
     expect(Romanizer.convert(6)).to eq('VI')
   end
