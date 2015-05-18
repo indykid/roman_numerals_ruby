@@ -11,4 +11,8 @@ describe Romanizer do
   it 'converts 3 to III' do
     expect(Romanizer.convert(3)).to eq('III')
   end
+
+  it 'converts 5 to V' do
+    expect(Romanizer.convert(5)).to eq('V')
+  end
 end
