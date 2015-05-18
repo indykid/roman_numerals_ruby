@@ -12,11 +12,15 @@ class Romanizer
     if CONVERSIONS.keys.include?(arabic)
       result << CONVERSIONS[arabic]
     else
-      return 'V' + 'I' if arabic == 5 + 1
-      return 'V' + 'I' + 'I' if arabic == 5 + 1 + 1
-      return 'V' + 'I' + 'I' + 'I' if arabic == 5 + 1 + 1 + 1
+      if arabic > 5
+        result << CONVERSIONS[5]
+        arabic -= 5
+      end
 
-      return 'I' * arabic
+      while arabic >= 1
+        result << CONVERSIONS[1]
+        arabic -= 1
+      end
     end
 
     result
