@@ -15,4 +15,8 @@ describe Romanizer do
   it 'converts 5 to V' do
     expect(Romanizer.convert(5)).to eq('V')
   end
+
+  it 'converts 10 into X' do
+    expect(Romanizer.convert(10)).to eq('X')
+  end
 end
