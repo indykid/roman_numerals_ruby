@@ -1,25 +1,18 @@
 class Romanizer
 
   CONVERSIONS = {
-    1  => 'I',
+    10 => 'X',
     5  => 'V',
-    10 => 'X'
+    1  => 'I',
   }
 
-  def self.convert(arabic)
+  def self.convert(number)
     result = ''
-    
-    if CONVERSIONS.keys.include?(arabic)
-      result << CONVERSIONS[arabic]
-    else
-      if arabic > 5
-        result << CONVERSIONS[5]
-        arabic -= 5
-      end
 
-      while arabic >= 1
-        result << CONVERSIONS[1]
-        arabic -= 1
+    CONVERSIONS.each do |arabic, roman|
+      while number >= arabic
+        result << roman
+        number -= arabic
       end
     end
 
