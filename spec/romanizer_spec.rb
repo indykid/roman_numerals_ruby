@@ -36,8 +36,21 @@ describe 'romaniser' do
   end
 end
 
+CONVERSIONS = {
+  10 => 'X',
+  5  => 'V',
+  1  => 'I'
+}
+
 def romaniser(arabic)
   result = ''
+
+  CONVERSIONS.each do |modern, roman|
+    while arabic >= modern
+      result << roman
+      arabic -= modern
+    end
+  end
 
   while arabic >= 10
     result << 'X'
