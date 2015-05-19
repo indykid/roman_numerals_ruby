@@ -32,15 +32,21 @@ describe 'romanizer' do
   end
 end
 
+CONVERSIONS = {
+  10 => 'X',
+  5  => 'V',
+  1  => 'I'
+}
+
 def romanizer(arabic)
   result = ''
-  result << 'X' if arabic == 10
+  if CONVERSIONS.keys.include?(arabic)
+    result << CONVERSIONS[arabic]
+  end
   result << 'V' << 'I' << 'I' << 'I' if arabic == 8
   result << 'V' << 'I' << 'I' if arabic == 7
   result << 'V' << 'I' if arabic == 6
-  result << 'V' if arabic == 5
   result << 'I' << 'I' << 'I' if arabic == 3
   result << 'I' << 'I' if arabic == 2
-  result << 'I' if arabic == 1
   result
 end
