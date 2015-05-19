@@ -26,27 +26,18 @@ describe 'romanizer' do
   it 'converts 8' do
     expect(romanizer(8)).to eq('VIII')
   end
-
-  it 'converts 10' do
-    expect(romanizer(10)).to eq('X')
-  end
 end
-
-CONVERSIONS = {
-  10 => 'X',
-  5  => 'V',
-  1  => 'I'
-}
 
 def romanizer(arabic)
   result = ''
-  if CONVERSIONS.keys.include?(arabic)
-    result << CONVERSIONS[arabic]
+  if arabic >= 5
+    result << 'V'
+    arabic -= 5
   end
-  result << 'V' << 'I' << 'I' << 'I' if arabic == 8
-  result << 'V' << 'I' << 'I' if arabic == 7
-  result << 'V' << 'I' if arabic == 6
-  result << 'I' << 'I' << 'I' if arabic == 3
-  result << 'I' << 'I' if arabic == 2
+
+  while arabic >= 1
+    result << 'I'
+    arabic -= 1
+  end
   result
 end
