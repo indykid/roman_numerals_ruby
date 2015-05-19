@@ -29,9 +29,15 @@ describe 'romanizer' do
 end
 
 def romanizer(arabic)
-  return 'V' if arabic == 5
-  return 'VI' if arabic == 6
-  return 'VII' if arabic == 7
-  return 'VIII' if arabic == 8
-  return 'I'*arabic
+  result = ''
+  result << 'V' if arabic == 5
+  result << 'V' << 'I' if arabic == 5 + 1
+  result << 'V' << 'I' << 'I' if arabic == 5 + 1 + 1
+  result << 'V' << 'I' << 'I' << 'I' if arabic == 5 + 1 + 1 + 1
+  if arabic < 5
+    arabic.times do
+      result << 'I'
+    end
+  end
+  result
 end
