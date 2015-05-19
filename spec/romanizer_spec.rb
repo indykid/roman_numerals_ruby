@@ -13,6 +13,7 @@ describe 'romanizer' do
 end
 
 def romanizer(arabic)
+  return 'I'*arabic
   return 'III' if arabic == 3
   return 'II' if arabic == 2
   return 'I' if arabic == 1
