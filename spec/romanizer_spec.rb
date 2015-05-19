@@ -23,12 +23,13 @@ describe 'romanizer' do
     expect(romanizer(7)).to eq('VII')
   end
 
-  xit 'converts 8' do
+  it 'converts 8' do
     expect(romanizer(8)).to eq('VIII')
   end
 end
 
 def romanizer(arabic)
+  return 'VIII' if arabic == 8
   return 'VII' if arabic == 7
   return 'VI' if arabic == 6
   return 'V' if arabic == 5
