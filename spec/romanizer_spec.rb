@@ -19,7 +19,7 @@ describe 'romanizer' do
     expect(romanizer(6)).to eq('VI')
   end
 
-  xit 'converts 7' do
+  it 'converts 7' do
     expect(romanizer(7)).to eq('VII')
   end
 
@@ -29,6 +29,7 @@ describe 'romanizer' do
 end
 
 def romanizer(arabic)
+  return 'VII' if arabic == 7
   return 'VI' if arabic == 6
   return 'V' if arabic == 5
   return 'I' * arabic
