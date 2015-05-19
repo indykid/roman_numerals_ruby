@@ -52,19 +52,5 @@ def romaniser(arabic)
     end
   end
 
-  while arabic >= 10
-    result << 'X'
-    arabic -= 10
-  end
-
-  while arabic >= 5
-    result << 'V'
-    arabic -= 5
-  end
-
-  while arabic >= 1
-    result << 'I'
-    arabic -= 1
-  end
   result
 end
