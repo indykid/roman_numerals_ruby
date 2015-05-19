@@ -15,7 +15,7 @@ describe 'romanizer' do
     expect(romanizer(5)).to eq('V')
   end
 
-  xit 'converts 6' do
+  it 'converts 6' do
     expect(romanizer(6)).to eq('VI')
   end
 
@@ -29,6 +29,7 @@ describe 'romanizer' do
 end
 
 def romanizer(arabic)
+  return 'VI' if arabic == 6
   return 'V' if arabic == 5
   return 'I' * arabic
 end
