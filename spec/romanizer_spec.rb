@@ -26,11 +26,25 @@ describe 'romaniser' do
   it 'converts 8' do
     expect(romaniser(8)).to eq('VIII')
   end
+
+  it 'converts 10' do
+    expect(romaniser(10)).to eq('X')
+  end
+
+  it 'converts 20' do
+    expect(romaniser(20)).to eq('XX')
+  end
 end
 
 def romaniser(arabic)
   result = ''
-  if arabic >= 5
+
+  while arabic >= 10
+    result << 'X'
+    arabic -= 10
+  end
+
+  while arabic >= 5
     result << 'V'
     arabic -= 5
   end
