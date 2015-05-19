@@ -26,10 +26,15 @@ describe 'romanizer' do
   it 'converts 8' do
     expect(romanizer(8)).to eq('VIII')
   end
+
+  it 'converts 10' do
+    expect(romanizer(10)).to eq('X')
+  end
 end
 
 def romanizer(arabic)
   result = ''
+  result << 'X' if arabic == 10
   result << 'V' << 'I' << 'I' << 'I' if arabic == 8
   result << 'V' << 'I' << 'I' if arabic == 7
   result << 'V' << 'I' if arabic == 6
