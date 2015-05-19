@@ -1,6 +1,9 @@
 require 'romanizer'
 
   TESTS = {
+    3333 => 'MMMCCCXXXIII',
+    1900 => 'MCM',
+    1400 => 'MCD',
     1000 => 'M',
     900 => 'CM',
     500 => 'D',
