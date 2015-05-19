@@ -29,11 +29,13 @@ describe 'romanizer' do
 end
 
 def romanizer(arabic)
-  return '' << 'V' << 'I' << 'I' << 'I' if arabic == 8
-  return '' << 'V' << 'I' << 'I' if arabic == 7
-  return '' << 'V' << 'I' if arabic == 6
-  return '' << 'V' if arabic == 5
-  return '' << 'I' << 'I' << 'I' if arabic == 3
-  return '' << 'I' << 'I' if arabic == 2
-  return '' << 'I' if arabic == 1
+  result = ''
+  result << 'V' << 'I' << 'I' << 'I' if arabic == 8
+  result << 'V' << 'I' << 'I' if arabic == 7
+  result << 'V' << 'I' if arabic == 6
+  result << 'V' if arabic == 5
+  result << 'I' << 'I' << 'I' if arabic == 3
+  result << 'I' << 'I' if arabic == 2
+  result << 'I' if arabic == 1
+  result
 end
