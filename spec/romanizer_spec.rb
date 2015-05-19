@@ -33,5 +33,7 @@ def romanizer(arabic)
   return 'V' << 'I' << 'I' if arabic == 7
   return 'V' << 'I' if arabic == 6
   return 'V' if arabic == 5
-  return 'I' * arabic
+  return 'I' << 'I' << 'I' if arabic == 3
+  return 'I' << 'I' if arabic == 2
+  return 'I' if arabic == 1
 end
