@@ -1,34 +1,34 @@
-describe 'romanizer' do
+describe 'romaniser' do
   it 'converts 1' do
-    expect(romanizer(1)).to eq('I')
+    expect(romaniser(1)).to eq('I')
   end
 
   it 'converts 2' do
-    expect(romanizer(2)).to eq('II')
+    expect(romaniser(2)).to eq('II')
   end
 
   it 'converts 3' do
-    expect(romanizer(3)).to eq('III')
+    expect(romaniser(3)).to eq('III')
   end
 
   it 'converts 5' do
-    expect(romanizer(5)).to eq('V')
+    expect(romaniser(5)).to eq('V')
   end
 
   it 'converts 6' do
-    expect(romanizer(6)).to eq('VI')
+    expect(romaniser(6)).to eq('VI')
   end
 
   it 'converts 7' do
-    expect(romanizer(7)).to eq('VII')
+    expect(romaniser(7)).to eq('VII')
   end
 
   it 'converts 8' do
-    expect(romanizer(8)).to eq('VIII')
+    expect(romaniser(8)).to eq('VIII')
   end
 end
 
-def romanizer(arabic)
+def romaniser(arabic)
   result = ''
   if arabic >= 5
     result << 'V'
